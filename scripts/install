@@ -35,7 +35,7 @@ ynh_add_nginx_config
 # Create a dedicated systemd config
 ynh_add_systemd_config
 
-yunohost service add $app --description="A short description of the app" --log="/var/log/$app/$app.log"
+yunohost service add $app --description="Scheduling infrastructure" --log="/var/log/$app/$app.log"
 
 # Use logrotate to manage application logfile(s)
 ynh_use_logrotate
@@ -47,7 +47,7 @@ ynh_use_logrotate
 #=================================================
 ynh_script_progression --message="Adding a configuration file..." --weight=1
 
-ynh_add_config --template="../conf/.env" --destination="$install_dir/.enc"
+ynh_add_config --template=".env" --destination="$install_dir/.enc"
 
 chmod 400 "$install_dir/.env"
 chown $app:$app "$install_dir/.env"

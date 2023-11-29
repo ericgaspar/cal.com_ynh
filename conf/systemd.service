@@ -1,5 +1,5 @@
 [Unit]
-Description=Small description of the service
+Description=Cal.com: Scheduling infrastructure
 After=network.target
 
 [Service]
