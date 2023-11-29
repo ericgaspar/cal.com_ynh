@@ -7,9 +7,9 @@ name = "Cal.com"
 description.en = "Explain in *a few (10~15) words* the purpose of the app or what it actually does (it is meant to give a rough idea to users browsing a catalog of 100+ apps)"
 description.fr = "Expliquez en *quelques* (10~15) mots l'utilité de l'app ou ce qu'elle fait (l'objectif est de donner une idée grossière pour des utilisateurs qui naviguent dans un catalogue de 100+ apps)"
 
-version = "3.2.10~ynh1"
+version = "3.5.3~ynh1"
 
-maintainers = ["johndoe"]
+maintainers = [""]
 
 [upstream]
 license = "free"
@@ -21,8 +21,11 @@ userdoc = "https://github.com/calcom/cal.com"
 yunohost = ">= 11.2"
 architectures = "all"
 multi_instance = true
+
 ldap = false
+
 sso = false
+
 disk = "50M"
 ram.build = "50M"
 ram.runtime = "50M"
@@ -40,8 +43,8 @@ ram.runtime = "50M"
     [resources.sources]
 
         [resources.sources.main]
-        url = "https://github.com/calcom/cal.com/archive/refs/tags/v3.2.10.tar.gz"
-        sha256 = "d2da3b94177959cbbaab05bced86482e7b192cddf07bc658ad5cb8735d8b600d"
+        url = "https://github.com/calcom/cal.com/archive/refs/tags/v3.5.3.tar.gz"
+        sha256 = "fe317d47827d1d68d65a7073fa4923aa45976a59a2093e88c2df0abff5c22f07"
         autoupdate.strategy = "latest_github_tag"
 
     [resources.system_user]

@@ -9,6 +9,9 @@
 source _common.sh
 source /usr/share/yunohost/helpers
 
+secret_key=$(ynh_string_random --length=32 | base64)
+key=$(ynh_string_random --length=24 | base64)
+
 #=================================================
 # APP "BUILD" (DEPLOYING SOURCES, VENV, COMPILING ETC)
 #=================================================
@@ -56,8 +59,8 @@ ynh_script_progression --message="Installing $app..." --weight=10
 
 pushd $install_dir
  	ynh_use_nodejs
-	ynh_exec_warn_less sudo -u $app env $ynh_node_load_PATH yarn #install
-	ynh_exec_warn_less sudo -u $app env $ynh_node_load_PATH NODE_ENV=production yarn workspace @calcom/prisma db-deploy
+	ynh_exec_warn_less sudo -u $app env $ynh_node_load_PATH yarn build
+	#ynh_exec_warn_less sudo -u $app env $ynh_node_load_PATH NODE_ENV=production yarn workspace @calcom/prisma db-deploy
 popd
 
 #=================================================
