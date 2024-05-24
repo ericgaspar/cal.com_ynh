@@ -7,6 +7,9 @@
 source _common.sh
 source /usr/share/yunohost/helpers
 
+
+key=$(openssl rand -base64 32)
+
 #=================================================
 # INSTALL DEPENDENCIES
 #=================================================
