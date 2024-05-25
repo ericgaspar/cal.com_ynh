@@ -56,6 +56,8 @@ ynh_script_progression --message="Installing $app..." --weight=1
 pushd $install_dir
  	ynh_use_nodejs
 	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH yarn install --production
+	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH yarn build
+	#ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH yarn workspace @calcom/prisma db-deploy
 popd
 
 #=================================================

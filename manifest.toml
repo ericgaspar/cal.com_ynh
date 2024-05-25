@@ -9,14 +9,12 @@ description.fr = "Expliquez en *quelques* (10~15) mots l'utilité de l'app ou ce
 
 version = "4.1.4~ynh1"
 
-maintainers = ["johndoe"]
+maintainers = ["eric_G"]
 
 [upstream]
 license = "free"
 website = "https://cal.com/"
 demo = "https://demo.example.com"
-admindoc = "https://yunohost.org/packaging_apps"
-userdoc = "https://yunohost.org/apps"
 code = "https://github.com/calcom"
 
 [integration]
@@ -71,8 +69,6 @@ ram.runtime = "50M"
 
     [resources.install_dir]
 
-    [resources.data_dir]
-
     [resources.permissions]
     main.url = "/"
 
@@ -86,4 +82,3 @@ ram.runtime = "50M"
 
     [resources.database]
     type = "postgresql"
-    
